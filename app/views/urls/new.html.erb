@@ -1,0 +1,10 @@
+<div>
+  <h3>Welcome to my url shortener</h3>
+</div>
+
+<div>
+  <%= simple_form_for @url do |form| %>
+    <%= form.input :original_url %>
+    <%= form.submit 'Shorten' %>
+  <% end %>
+</div>

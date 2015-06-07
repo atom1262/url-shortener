@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
-  root "homes#show"
+  root "urls#new"
+
+  resources :urls, only: [:create, :show]
 
 end

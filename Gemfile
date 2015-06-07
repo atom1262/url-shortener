@@ -7,6 +7,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'simple_form'
+gem 'i18n'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -23,4 +25,5 @@ end
 
 group :test do
   gem 'capybara-webkit'
+  gem 'shoulda-matchers'
 end
