@@ -6,10 +6,11 @@ RSpec.feature "Guest shortens url" do
 
     fill_in "Original URL", with: "http://google.com"
     click_on "Shorten"
+    new_url = Url.last
 
+    expect(page).to have_content(I18n.t("urls.show.congrats"))
     expect(page).to have_content(
-      "Congratulations! Your URL has been shortened"
+      I18n.t("urls.show.short_url", short_url: new_url.short_url)
     )
-    expect(page).to have_content("Shortened URL:")
   end
 end

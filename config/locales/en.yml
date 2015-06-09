@@ -21,5 +21,8 @@
 
 en:
   urls:
+    show:
+      congrats: "Congratulations! Your URL has been shortened."
+      short_url: "Shortened URL: %{short_url}"
     create:
       failure: "Sorry, there was a problem shortening your url."
