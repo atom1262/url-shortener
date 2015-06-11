@@ -4,7 +4,7 @@ class Url < ActiveRecord::Base
 
 
   def short_url
-    "http://localhost:3000/#{token}"
+    "#{ENV.fetch("HOST")}#{token}"
   end
 
   private

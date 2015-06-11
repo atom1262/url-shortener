@@ -6,9 +6,8 @@ RSpec.describe Url do
   describe "#short_url" do
     it "returns the shortened url based on the token" do
       url = create(:url, token: '1234' )
-      binding.pry
 
-      expect(url.short_url).to eq("http://localhost:3000/1234")
+      expect(url.short_url).to eq("#{ENV.fetch("HOST")}#{url.token}")
     end
   end
 end
