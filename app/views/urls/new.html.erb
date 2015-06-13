@@ -2,13 +2,13 @@
   <h3>Welcome to my url shortener</h3>
 </div>
 
-<div>
-  <%= simple_form_for @url, remote: true do |form| %>
+<div class="url-form">
+  <%= simple_form_for(@url, remote: true) do |form| %>
     <%= form.input :original_url %>
     <%= form.submit 'Shorten' %>
   <% end %>
 </div>
 
-<div class="urls">
-  <p class="short_url"></p>
+<div class="url">
+  <p id="new-url">This is where your URL will be!</p>
 </div>

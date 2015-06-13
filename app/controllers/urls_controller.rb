@@ -11,11 +11,13 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(url_params)
 
-    if @url.save
-      redirect_to url_path(@url)
-    else
-      flash[:error] = I18n.t('urls.create.failure')
-      render :new
+    respond_to do |format|
+      if @url.save
+        format.js
+      else
+        flash[:error] = I18n.t('urls.create.failure')
+        render :new
+      end
     end
   end
 

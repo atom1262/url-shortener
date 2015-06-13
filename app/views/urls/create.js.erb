@@ -1,3 +1,2 @@
-$("#urls").val("");
-template = "<%=j render @url %>";
-$("#short_url").prepend(template);
+template = $('<%=j render @url %>');
+$('#new-url').replaceWith(template);
